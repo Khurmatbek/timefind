@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgb(255 240 9);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+    animation: color 20s ease-in-out 0s infinite forwards;
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.speed__wrap-box {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 20px;
+    align-items: center;
+    border: 2px solid rgba(48, 47, 47, 0.833);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 6px #454545;
+}
+.speed__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.speed__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: black;
+}
+.speed__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.speed__label {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+.speed__input-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.speed__input {
+    padding: 7px 20px;
+    outline: none;
+    background-color: transparent;
+    border: 1.2px solid black;
+    color: black;
+    border-radius: 25px;
+    /* font-size: 18px; */
+}
+.speed__input::placeholder {
+    font-weight: 700;
+    color: black;
+    opacity: 0.8;
+}
+.speed__btn {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1.2px solid black;
+    color: black;
+}
+.speed__list {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+}
+.speed__item {
+    min-width: 120px;
+    padding:10px;
+    border:1px solid black;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.speed__desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+.speed__desc::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-image: url("../images/boy.png");
+    background-size: cover;
+    content: " ";
+}
+
+.speed__desc--second::before {
+    background-image: url("../images/car.png");
+}
+.speed__desc--last::before {
+    background-image: url("../images/bike.png");
+}
+.speed__desc--last-sec::before {
+    background-image: url("../images/plane.png");
+}
+.speed__strong
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+
+@media only screen and (min-width: 576px) {
+    .speed__title {
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .speed__label {
+        font-size: 20px;
+    }
+    .speed__input {
+        padding: 10px 25px;
+    }
+    .speed__btn {
+        padding: 10px 18px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .speed__label {
+        margin-right: 50px;
+    }
+    .speed__input-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .speed__form{
+        display: flex;
+        flex-direction:row;
+        gap: 20px;
+    }
+    .speed__item {
+        min-width: 120px;
+        padding:10px;
+        border:2px solid black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    
+    
+}
+@media only screen and (min-width: 900px){
+    
+    .speed__wrap {
+        width: 800px;
+        padding: 50px;
+    }
+    .speed__list{
+        justify-content: space-between;
+    }
+    .speed__title {
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-weight: 800;
+        
+    }
+    .speed__input-box{
+        justify-content: space-between;
+    }
+    .speed__input{
+        width: 350px;
+        border: 2px solid black;
+        text-align: center;
+    }
+    .speed__btn{
+        border:2px solid black;
+    }
+    .speed__item{
+        max-width:150px;
+        width: 100%;
+    }
+    
+}
+
+/*  animation part */
+@keyframes color {
+    0% {
+        background-color: rgb(255 240 9);
+    }
+    30% {
+        background-color: rgb(255 135 9);
+    }
+    50% {
+        background-color: rgb(120 252 0);
+    }
+    80% {
+        background-color: rgb(253 9 255);
+    }
+    100% {
+        background-color: rgb(255 240 9);
+    }
+}
